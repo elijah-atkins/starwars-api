@@ -1,9 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto+Mono:wght@300&display=swap');
 body {
   margin: 0;
-  font-family: sans-serif;
-  background: #222;
-  color: #ddd;
+  font-family: 'Orbitron', sans-serif;
+  background: #999;
+  color: #111;
   text-align: center;
+  background: radial-gradient(rgba(151, 151, 151, 0.5),
+  rgba(255, 255, 255, 0.5)), url(./images/sw-bg.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
 .App{
   width: 960px;
@@ -16,21 +22,26 @@ h1{
 }
 button{
   margin: 0 10px;
+  font-family: 'Roboto Mono', monospace;
   background: transparent;
-  border: 3px solid #ccc;
+  border: 3px solid #333;
   border-radius: 20px;
   padding: 10px;
-  color: #ccc;
+  color: #333;
+  background-color: rgba(129, 129, 129, 0.5);
   font-size: 1.2em;
   cursor: pointer;
 }
 button:hover{
-  color: #fff;
-  border-color: #fff;;
+  color: #000;
+  border-color: #000;;
 }
 button:disabled{
   opacity: 0.2;
   cursor: default;
+}
+span{
+  font-size: 2em;
 }
 .content{
   text-align: left;
@@ -38,7 +49,7 @@ button:disabled{
 
 .card{
   padding: 8px 16px;
-  background: #1b1b1b;
+  background: rgba(28, 28, 28, 0.8);
   margin: 16px 0;
   border-radius: 20px;
 }
@@ -49,5 +60,5 @@ button:disabled{
 }
 .card h3{
   margin: 10px 0;
-  color: #ffff00
+  color: #ffff53
 }

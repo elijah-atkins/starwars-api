@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Planets from './components/Planets';
 import People from './components/People';
+
 import { ReactQueryDevtools } from 'react-query-devtools'
 
 
