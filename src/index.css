@@ -16,7 +16,7 @@ body {
   margin: 0 auto;
 }
 h1{
-  color: #ffff57;
+  color: #2c293b;
   font-size: 4em;
   letter-spacing: 2px;
 }
@@ -24,24 +24,24 @@ button{
   margin: 0 10px;
   font-family: 'Roboto Mono', monospace;
   background: transparent;
-  border: 3px solid #333;
+  border: 3px solid rgb(52, 54, 68);
   border-radius: 20px;
   padding: 10px;
-  color: #333;
-  background-color: rgba(129, 129, 129, 0.5);
+  color: rgb(52, 54, 68);
+  background-color: rgba(129, 107, 81, 0.6);
   font-size: 1.2em;
   cursor: pointer;
 }
 button:hover{
   color: #000;
-  border-color: #000;;
+  border-color: #000;
 }
 button:disabled{
   opacity: 0.2;
   cursor: default;
 }
 span{
-  font-size: 2em;
+  font-size: 2rem;
 }
 .content{
   text-align: left;
