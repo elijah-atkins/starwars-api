@@ -1,7 +1,5 @@
 import React from "react";
-function Capitalize(str){
-  return str.charAt(0).toUpperCase() + str.slice(1);
-}
+import Capitalize from '../utils/Capitalize'
 const Person = ({ person }) => {
   return (
     <div className="card">
