@@ -1,10 +1,11 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom'
 
-const Navbar = ({ setPage }) => {
+const Navbar = () => {
   return ( 
     <nav>
-      <button onClick={() => setPage('planets')}>Planets</button>
-      <button onClick={() => setPage('chars')}>People</button>
+      <NavLink to="/planets"><button>Planets</button></NavLink>
+      <NavLink to="/people"><button>People</button></NavLink>
     </nav>
   );
 }
