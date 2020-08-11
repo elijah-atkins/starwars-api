@@ -1,23 +1,23 @@
 import React, { useState } from "react";
 import { usePaginatedQuery } from "react-query";
-import Planet from "./Planet";
+import Starship from "./Starship";
 
-const fetchPlanets = async (key, page) => {
-  const res = await fetch(`https://swapi.dev/api/planets/?page=${page}`);
+const fetchStarships = async (key, page) => {
+  const res = await fetch(`https://swapi.dev/api/starships/?page=${page}`);
   return res.json();
 };
-const Planets = () => {
+const Starships = () => {
   const [page, setPage] = useState(1);
 
   const { resolvedData, latestData, status } = usePaginatedQuery(
-    ["planets", page],
-    fetchPlanets,
+    ["starships", page],
+    fetchStarships,
     { staleTime: 10000 }
   );
   //console.log(data, status);
   return (
     <div>
-      <h2>Planets</h2>
+      <h2>Starships</h2>
 
       {status === "loading" && <div>Loading data...</div>}
       {status === "error" && <div>Error fetching data</div>}
@@ -31,8 +31,8 @@ const Planets = () => {
           Next Page
         </button>
         <div className="card-container">
-          {resolvedData.results.map((planet) => (
-            <Planet key={planet.name} planet={planet} />
+          {resolvedData.results.map((starship) => (
+            <Starship key={starship.name} starship={starship} />
           ))}
         </div></>
       )}
@@ -40,4 +40,4 @@ const Planets = () => {
   );
 };
 
-export default Planets;
+export default Starships;
