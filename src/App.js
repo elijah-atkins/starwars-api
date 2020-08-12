@@ -7,8 +7,8 @@ import Films from './components/Films'
 import Species from './components/Species';
 import Starships from './components/Starships';
 import Vehicles from './components/Vehicles';
+import Splash from './components/Splash';
 
-import { ReactQueryDevtools } from 'react-query-devtools'
 
 
 function App() {
@@ -18,10 +18,11 @@ function App() {
     <div className="App">
      <h1>Star Wars Info</h1>
       <Navbar />
+     <Switch>
+
       <Route path="/films">
       <Films />
       </Route>
-     <Switch>
         <Route path ="/planets">
       <Planets  />
         </Route>
@@ -37,9 +38,12 @@ function App() {
       <Route path="/vehicles">
       <Vehicles />
       </Route>
+      <Route path="/">
+      <Splash />
+      </Route>
       </Switch>
     </div>
-    <ReactQueryDevtools initialIsOpen={false} />
+
     </>
   );
 }

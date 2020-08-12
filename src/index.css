@@ -1,16 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto+Mono:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto+Mono:wght@300&display=swap");
 html {
   overflow: hidden;
   height: 100%;
 }
 body {
   margin: 0;
-  font-family: 'Orbitron', sans-serif;
+  font-family: "Orbitron", sans-serif;
   background: #999;
   color: #111;
   text-align: center;
-  background: radial-gradient(rgba(170, 170, 170, 0.6),
-  rgba(0,0,0, 0.6)), url(./images/sw-bg.jpg);
+  background: radial-gradient(rgba(173, 148, 132, 0.4), rgba(17, 14, 14, 0.3)),
+    linear-gradient(27deg, rgba(190, 189, 139, 0.3), rgba(17, 8, 6, 0.2)),
+    url(./images/sw-bg.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -18,24 +19,24 @@ body {
   height: 100%;
   overflow: auto;
 }
-.App{
+.App {
   width: 100vw;
   margin: 0 auto;
 }
-h1{
-  color: #1a1439;
+h1 {
+  color: #391f14;
   width: 100%;
-  font-size: clamp(3rem, 5vw, 6rem); 
+  font-size: clamp(3rem, 5vw, 6rem);
   letter-spacing: 2px;
 }
-h2{
-  color: #2c293b;
+h2 {
+  color: #391f14;
   font-size: 2.5em;
   letter-spacing: 2px;
 }
-button{
+button {
   margin: 10px;
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
   background: transparent;
   border: 3px solid rgb(52, 54, 68);
   border-radius: 20px;
@@ -45,15 +46,15 @@ button{
   font-size: 1.2em;
   cursor: pointer;
 }
-button:hover{
+button:hover {
   color: rgb(238, 255, 0);
   border-color: #000;
 }
-button:disabled{
+button:disabled {
   opacity: 0.2;
   cursor: default;
 }
-span{
+span {
   font-size: 2rem;
 }
 
@@ -67,10 +68,10 @@ span{
   min-width: 25%;
   max-width: 100%;
   flex-grow: 1;
-  flex-basis: calc(var(--multiplier) *10);
+  flex-basis: calc(var(--multiplier) * 10);
 }
-.card{
-  font-family: 'Roboto Mono', monospace;
+.card {
+  font-family: "Roboto Mono", monospace;
   text-align: left;
   padding: 8px 16px;
   background: rgba(28, 28, 28, 0.8);
@@ -79,12 +80,12 @@ span{
   border: 3px solid rgb(52, 54, 68);
 }
 
-.card p{
+.card p {
   margin: 6px 0;
   color: #ccc;
 }
-.card h3{
-  font-family: 'Orbitron', sans-serif;
+.card h3 {
+  font-family: "Orbitron", sans-serif;
   margin: 10px 0;
-  color: #ffff53
+  color: #ffff53;
 }
