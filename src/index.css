@@ -1,23 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto+Mono:wght@300&display=swap');
+html {
+  overflow: hidden;
+  height: 100%;
+}
 body {
   margin: 0;
   font-family: 'Orbitron', sans-serif;
   background: #999;
   color: #111;
   text-align: center;
-  background: radial-gradient(rgba(151, 151, 151, 0.5),
-  rgba(255, 255, 255, 0.5)), url(./images/sw-bg.jpg);
+  background: radial-gradient(rgba(170, 170, 170, 0.6),
+  rgba(0,0,0, 0.6)), url(./images/sw-bg.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+  background-size: cover;
+  height: 100%;
+  overflow: auto;
 }
 .App{
-  width: 960px;
+  width: 100vw;
   margin: 0 auto;
 }
 h1{
-  color: #2c293b;
-  font-size: 4em;
+  color: #1a1439;
+  width: 100%;
+  font-size: clamp(3rem, 5vw, 6rem); 
   letter-spacing: 2px;
 }
 h2{
@@ -26,7 +34,7 @@ h2{
   letter-spacing: 2px;
 }
 button{
-  margin: 0 10px;
+  margin: 10px;
   font-family: 'Roboto Mono', monospace;
   background: transparent;
   border: 3px solid rgb(52, 54, 68);
@@ -51,19 +59,24 @@ span{
 
 .card-container {
   display: flex;
-  flex-flow: row wrap;
+  flex-wrap: wrap;
+  --multiplier: calc(40rem - 100%);
   justify-content: center;
+}
+.card-container > * {
+  min-width: 25%;
+  max-width: 100%;
+  flex-grow: 1;
+  flex-basis: calc(var(--multiplier) *10);
 }
 .card{
   font-family: 'Roboto Mono', monospace;
   text-align: left;
   padding: 8px 16px;
   background: rgba(28, 28, 28, 0.8);
-  margin: 16px 16px;
+  margin: 16px;
   border-radius: 20px;
-  width: 250px;
   border: 3px solid rgb(52, 54, 68);
-
 }
 
 .card p{

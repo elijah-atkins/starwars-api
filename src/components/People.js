@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import { usePaginatedQuery } from "react-query";
+import swapiModule from '../lib/swapiModule'
 import Person from "./Person";
 
 const fetchPeople = async (key, page) => {
-  const res = await fetch(`https://swapi.dev/api/people/?page=${page}`);
-  return res.json();
-  //   swapiModule.getPeople({page: `${page}`}, (data) => {
-  //   console.log("Result of getPeople", data.results);
-  //   return data.results;
-  // });
+  // const res = await fetch(`https://swapi.dev/api/people/?page=${page}`);
+  // return res.json();
+    const res = await swapiModule.getPeople({page: `${page}`})
+    return res
 };
 const People = () => {
   const [page, setPage] = useState(1);
@@ -17,6 +16,7 @@ const People = () => {
     fetchPeople,
     { staleTime: 10000 }
   );
+
   return (
     <div>
       <h2>People</h2>
