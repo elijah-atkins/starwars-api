@@ -7,7 +7,7 @@ const fetchFilms = async () => {
   return res.json();
 };
 const Films = () => {
-    const { data, status } = useQuery('people', fetchFilms);
+    const { data, status } = useQuery('film', fetchFilms);
   //console.log(data, status);
   return (
     <div>
@@ -26,7 +26,7 @@ const Films = () => {
         </button> */}
         <div className="card-container">
           {data.results.map((film) => (
-            <Film key={film.name} film={film} />
+            <Film key={film.title} film={film} />
           ))}
         </div></>
       )}

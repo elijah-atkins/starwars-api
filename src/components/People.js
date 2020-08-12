@@ -5,6 +5,10 @@ import Person from "./Person";
 const fetchPeople = async (key, page) => {
   const res = await fetch(`https://swapi.dev/api/people/?page=${page}`);
   return res.json();
+  //   swapiModule.getPeople({page: `${page}`}, (data) => {
+  //   console.log("Result of getPeople", data.results);
+  //   return data.results;
+  // });
 };
 const People = () => {
   const [page, setPage] = useState(1);
