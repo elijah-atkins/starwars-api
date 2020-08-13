@@ -72,6 +72,7 @@ span {
 }
 .card {
   font-family: "Roboto Mono", monospace;
+  font-size: clamp(1rem, 1.5vw, 1.6rem);
   text-align: left;
   padding: 8px 16px;
   background: rgba(28, 28, 28, 0.8);
