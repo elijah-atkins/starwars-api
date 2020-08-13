@@ -8,7 +8,8 @@ const Film = ({ film }) => {
       <p>Episode {film.episode_id}</p>
       <p>Director - {film.director}</p>
       <p>Producer - {film.producer}</p>
-      <p>Release Date {film.release_date}</p>
+      <p>Release Date - {film.release_date}</p>
+      <p>Opening Crawl - {film.opening_crawl}</p>
     </div>
   );
 };
