@@ -9,7 +9,7 @@ const Film = ({ film }) => {
       <p>Director - {film.director}</p>
       <p>Producer - {film.producer}</p>
       <p>Release Date - {film.release_date}</p>
-      <p>Opening Crawl - {film.opening_crawl}</p>
+      <p className="crawl">{film.opening_crawl}</p>
     </div>
   );
 };
